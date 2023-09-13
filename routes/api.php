@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LivreController;
+use App\Http\Controllers\AuteurController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,9 @@ Route::get("/getLivres", [LivreController::class, "getLivres"]);
 Route::get("/getLivre/{id}", [LivreController::class, "getLivre"]);
 Route::post("/createLivre", [LivreController::class, "createLivre"]);
 Route::put("/updateLivre/{id}", [LivreController::class, "updateLivre"]);
+
+// route auteur
+Route::get("/GetAuteur", [AuteurController::class, "GetAuteur"]);
+Route::get("/GetFindAuteur/{id}", [AuteurController::class, "GetFindAuteur"]);
+Route::post("/CreateAuteur", [AuteurController::class, "CreateAuteur"]);
+Route::put("/UpdateAuteur/{id}", [AuteurController::class, "UpdateAuteur"]);
