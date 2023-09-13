@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "38413c9b-e7bb-4160-89d0-08b62806ca4a",
+		"_postman_id": "b37bfd2c-6ae9-40d5-86d3-9ebeb3e76674",
 		"name": "Projet_tafita",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -144,6 +144,58 @@
 								"createLivre"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD auteur",
+			"item": [
+				{
+					"name": "Get Auteur",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/GetAuteur",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"GetAuteur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Find Auteur",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Auteur",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Auteur",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
