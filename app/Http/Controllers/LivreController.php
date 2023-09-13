@@ -39,5 +39,4 @@ class LivreController extends Controller
         return $livre;
     }
 
-
 }

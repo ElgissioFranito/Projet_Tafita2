@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "38413c9b-e7bb-4160-89d0-08b62806ca4a",
+		"name": "Projet_tafita",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUthentification",
+			"item": []
+		},
+		{
+			"name": "test CRUD",
+			"item": [
+				{
+					"name": "getLivres",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getLivres",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getLivres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLivre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getLivre/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getLivre",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createLivre",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otera\" : 1,\r\n    \"titra\" : \"Tafita le Hercule\",\r\n    \"pejy\" : \"200\",\r\n    \"taona\" : \"2000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/createLivre",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"createLivre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateLivre",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otera\" : 1,\r\n    \"titra\" : \"Tafita le Hercule\",\r\n    \"pejy\" : \"200\",\r\n    \"taona\" : \"2000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/createLivre",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"createLivre"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
