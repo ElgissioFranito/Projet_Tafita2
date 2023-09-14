@@ -30,3 +30,4 @@ Route::get("/GetAuteur", [AuteurController::class, "GetAuteur"]);
 Route::get("/GetFindAuteur/{id}", [AuteurController::class, "GetFindAuteur"]);
 Route::post("/CreateAuteur", [AuteurController::class, "CreateAuteur"]);
 Route::put("/UpdateAuteur/{id}", [AuteurController::class, "UpdateAuteur"]);
+Route::delete("/deleteAuteur/{id}", [AuteurController::class, "deleteAuteur"]);

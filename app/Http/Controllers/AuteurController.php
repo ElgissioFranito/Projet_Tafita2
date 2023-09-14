@@ -3,34 +3,39 @@
 namespace App\Http\Controllers;
 
 use App\Models\Auteur;
+use App\Repository\AuteurRepository;
 use Illuminate\Http\Request;
 
 class AuteurController extends Controller
 {
-    //
-    public function GetAuteur(){
-        return Auteur::all();
+    public function GetAuteur()
+    {
+        return AuteurRepository::GetAuteur();
     }
 
-    public function GetFindAuteur($id){
-        return Auteur::findOrFail($id);
+    public function GetFindAuteur($id)
+    {
+        return AuteurRepository::GetFindAuteur($id);
     }
 
-    public function CreateAuteur(request $request){
-        $auteur = Auteur::create([
-            "nom_auteur" => $request -> nom_auteur,
-            "prenom_auteur" => $request -> prenom_auteur
-        ]);
+    public function CreateAuteur(request $request)
+    {
+        AuteurRepository::CreateAuteur($request);
     }
 
-    public function UpdateAuteur($id, Request $request){
-        $auteur = Auteur::findOrFail($id);
+    public function UpdateAuteur($id, Request $request)
+    {
+        $auteur = AuteurRepository::GetFindAuteur($id);
 
-        $auteur->update([
-            "nom_auteur" => $request -> nom_auteur,
-            "prenom_auteur" => $request -> prenom_auteur
-        ]);
+        AuteurRepository::UpdateAuteur($auteur, $request);
 
         return $auteur;
+    }
+
+    public function deleteAuteur($id)
+    {
+        AuteurRepository::deleteAuteur($id);
+
+        return "success!";
     }
 }
