@@ -24,6 +24,7 @@ Route::get("/getLivres", [LivreController::class, "getLivres"]);
 Route::get("/getLivre/{id}", [LivreController::class, "getLivre"]);
 Route::post("/createLivre", [LivreController::class, "createLivre"]);
 Route::put("/updateLivre/{id}", [LivreController::class, "updateLivre"]);
+Route::delete("/deleteLivre/{id}", [LivreController::class, "DeleteLivre"]);
 
 // route auteur
 Route::get("/GetAuteur", [AuteurController::class, "GetAuteur"]);
