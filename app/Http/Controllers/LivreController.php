@@ -17,25 +17,17 @@ class LivreController extends Controller
     }
 
     public function createLivre(Request $request){
-        $livre = Livre::create([
-            "id_auteur" => $request->id_auteur,
-            "tit_livre" =>  $request->tit_livre,
-            "page_livre" =>  $request->page_livre,
-            "edit_livre" =>  $request->edit_livre
-        ]);
-
-        return $livre;
+        return LivreRepository::createLivre($request);
     }
 
     public function updateLivre($id, Request $request){
-        $auteur = LivreRepository::GetFindLivre($id);
-
-        LivreRepository::UpdateLivre($auteur, $request);
-
+        $livre = LivreRepository::GetFindLivre($id);
+        LivreRepository::UpdateLivre($livre, $request);
         return $livre;
     }
 
     public function DeleteLivre($id) {
         LivreRepository::DeleteLivre($id);
+        return "creating success";
     }
 }
